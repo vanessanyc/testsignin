@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Form</title>
+    <script>
+        function getURLParameter(name) {
+            return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search)||[,""])[1].replace(/\+/g, '%20'))||null;
+        }
+
+        window.onload = function() {
+            var staff = getURLParameter('staff');
+            if (staff) {
+                document.getElementById('staff').value = staff;
+            }
+        }
+    </script>
+</head>
+<body>
+    <form action="https://docs.google.com/forms/u/0/d/e/1zGBN2d2PrcN92OZdFe2Q3UUOPwQVp0USGrt3YK9DICo/formResponse">
+        <label for="fname">First name:</label><br>
+        <input type="text" id="entry.2005620554" name="entry.2005620554"><br>
+        <label for="lname">Last name:</label><br>
+        <input type="text" id="entry.1045781291" name="entry.1045781291"><br> 
+        <label for="studentID">EMPLID:</label><br>
+        <input type="text" id="entry.1065046570" name="entry.1065046570"><br>  
+        <label for="staff">Staff:</label><br>
+        <input type="text" id="staff" name="entry.1618505282" readonly><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
